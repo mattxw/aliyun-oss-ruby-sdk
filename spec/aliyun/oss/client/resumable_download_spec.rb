@@ -206,7 +206,7 @@ module Aliyun
             # pass
           end
 
-          expect(File.exists?(cpt_file)).to be false
+          expect(File.exist?(cpt_file)).to be false
         end
 
         expect(success).to be true

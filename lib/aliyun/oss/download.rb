@@ -132,7 +132,7 @@ module Aliyun
         def rebuild
           logger.info("Begin rebuild transaction, checkpoint: #{@cpt_file}")
 
-          if options[:disable_cpt] || !File.exists?(@cpt_file)
+          if options[:disable_cpt] || !File.exist?(@cpt_file)
             initiate
           else
             states = load_checkpoint(@cpt_file)
